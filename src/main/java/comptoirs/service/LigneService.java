@@ -45,6 +45,10 @@ public class LigneService {
      */
     @Transactional
     Ligne ajouterLigne(Integer commandeNum, Integer produitRef, @Positive int quantite) {
-        throw new UnsupportedOperationException("Cette méthode n'est pas implémentée");
+
+        //var commande = commandeDao.findById(commandeNum).orElseThrow();
+        //var newLigne = new Ligne(commandeNum,produitRef,quantite);
+
+        throw new UnsupportedOperationException("pas encore implémenté");
     }
 }
