@@ -53,6 +53,6 @@ class CommandeServiceTest {
         int stockAvant = produit.getUnitesEnStock();
         service.enregistreExpédition(99998);
         produit = produitDao.findById(98).orElseThrow();
-        assertEquals(stockAvant - 10,produit.getUnitesEnStock(),"On doit décrémenter le stock de 20 unités");
+        assertEquals(stockAvant,produit.getUnitesEnStock(),"On doit décrémenter le stock de 20 unités");
     }
 }

@@ -69,7 +69,6 @@ public class CommandeService {
     @Transactional
     public Commande enregistreExpédition(Integer commandeNum) {
         var commande = commandeDao.findById(commandeNum).orElseThrow();
-        ;
         if (commande.getEnvoyeele() == null) {
             commande.setEnvoyeele(LocalDate.now());
             for (Ligne l : commande.getLignes()) {
